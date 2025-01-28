@@ -1,4 +1,4 @@
-Face Recognition with MTCNN and InceptionResnetV1
+Face Recognition with MTCNN and InceptionResnetV1!
 
 This project implements a face recognition system using MTCNN for face detection and InceptionResnetV1 for face recognition. The solution also includes training a k-Nearest Neighbors (k-NN) classifier for labeling detected faces and evaluating the model on a dataset.
 
