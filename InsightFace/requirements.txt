@@ -1,0 +1,11 @@
+torch
+torchvision
+tqdm
+numpy
+opencv-python
+Pillow
+scikit-learn
+matplotlib
+mtcnn
+insightface
+pickle5
