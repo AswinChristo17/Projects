@@ -1,4 +1,4 @@
-Siamese Neural Network for Binary Face Recognition
+Siamese Neural Network for Binary Face Recognition!
 
 Overview
 
@@ -16,6 +16,6 @@ Uses TensorFlow and Keras for model development.
 
 Supports real-time face verification.
 
-Dataset
+Dataset!
 
 The IFW dataset (Images of Faces in the Wild) is used for training and testing. This dataset contains diverse facial images with variations in pose, illumination, and expression.
