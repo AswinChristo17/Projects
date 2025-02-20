@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles1.css') }}">
+    <title>Join Meeting</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Join a Meeting</h1>
+        <p>Enter your meeting code or link below:</p>
+        <input type="text" class="meeting-input" placeholder="Meeting code or link">
+        <a href="/meeting" class="join-button">Join Meeting</a>
+        <div class="footer">
+            <p>&copy; 2024 Virtual Meeting Room. All Rights Reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

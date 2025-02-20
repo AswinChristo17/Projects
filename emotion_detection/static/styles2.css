@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.out{
+    height: 80%;
+    width: 90%;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.844);
+    border-radius: 20px;
+}
+.meeting-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%; 
+    height: 100%; 
+    
+    border-radius: 8px;
+    overflow: hidden;
+    padding: px; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); 
+}
+
+.video-container {
+    width: 100%; 
+    height: 100%;
+    position: relative;
+    border-radius: 10px;
+
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center; 
+    gap: 10px;
+    margin-top: 10px; 
+    padding: 10px 0; 
+    width: 100%; 
+}
+
+.control-button,
+.leave-button {
+    padding: 10px 15px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.control-button:hover {
+    background-color: #0056b3; 
+}
+
+.leave-button {
+    background-color: #ff4d4d; 
+}
+
+.leave-button:hover {
+    background-color: #ff1a1a; 
+}
+
+.emotion{
+    color: red;
+}
+
+.box{
+    box-shadow: black;
+}

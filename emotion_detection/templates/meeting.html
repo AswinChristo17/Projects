@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting Room</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles2.css') }}">
+</head>
+<body>
+ 
+    <div class="out">
+    <div  class="meeting-container">
+        <img src="{{ url_for('video_feed') }}" id="videoFeed" alt="Video Feed" class="video-container">
+    </div>
+    <div class="buttons-container">
+        <button class="control-button" id="present-button">Presenting</button>
+        <button class="control-button" id="mute-button">Mute</button>
+        <button class="control-button" id="mute-camera-button">Mute Camera</button>
+        <button class="control-button" id="message-button">Message</button>
+        <button class="leave-button" id="leave-button">Leave Call</button>
+    </div>
+</div>
+
+    <script>
+        // Function to periodically fetch the current emotion
+        function fetchEmotion() {
+            fetch('/get_emotion')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('emotionDisplay').innerText = 'Detected Emotion: ' + data.emotion;
+                })
+                .catch(error => {
+                    console.error('Error fetching emotion:', error);
+                });
+        }
+
+        // Fetch the emotion every second
+        setInterval(fetchEmotion, 1000);
+        document.getElementById('leave-button').onclick = function() {
+            fetch('/leave', { method: 'POST' })
+                .then(response => {
+                    window.location.href = '/';  // Redirect to home or another page
+                })
+                .catch(error => console.error('Error:', error));
+        };
+    </script>
+</body>
+</html>
